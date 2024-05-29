@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="uk">
+    <meta charset="UTF-8">
+    <title>Кошик</title>
+    <link rel="stylesheet" type="text/css" href="css-side.css"/>
+</head>
+
+<body>
+    <div class="budje">
+        <span id="buylist-text">Buy List<br><br></span>
+        <span>Created by:<br>Volodymyr Prokopchuk</span></div>
+
+    <div class="main">
+        <div class="content">
+            <div class="row">
+                <form class="add-field">
+                    <input class="add-text" type="text">
+                    <input class="add-submit" type="button" value="Додати">
+                </form>
+            </div>
+
+            <div class="row">
+                    <span id="product-line" class="product-item">
+                            Помідори
+                        </span>
+                <div id="all-add">
+                    <button data-tooltip="видалити товар">-</button>
+                    <span class="amount">2</span>
+                    <button data-tooltip="додати товар">+</button>
+                </div>
+                <div id="all-buy">
+                    <button id="all-buy" data-tooltip="куплено">куплено</button>
+                    <button id="all-buy" data-tooltip="відмінити">X</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <span class="product-item">
+                        Печиво
+                    </span>
+                <div id="all-add">
+                    <button data-tooltip="видалити товар">-</button>
+                    <span class="amount">2</span>
+                    <button data-tooltip="додати товар">+</button>
+                </div>
+                <div id="all-buy">
+                    <button id="all-buy" data-tooltip="куплено">куплено</button>
+                    <button id="all-buy" data-tooltip="відмінити">X</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <input id="product-field-add" class="product-item" value="Сир">
+                <div id="all-add">
+                    <button data-tooltip="видалити товар">-</button>
+                    <span class="amount">2</span>
+                    <button data-tooltip="додати товар">+</button>
+                </div>
+                <div id="all-buy">
+                    <button data-tooltip="куплено">куплено</button>
+                    <button data-tooltip="відмінити">X</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Права частина-->
+        <div class="buylist">
+            <div class="row">
+                <h3>
+                    Залишилося
+                </h3>
+            </div>
+
+            <div class="row" id="shopping-list-row">
+                <div id="item">
+                    <span>Печиво</span>
+                    <span id="item-amount">2</span>
+                </div>
+                <div id="item">
+                    <span>Cир</span>
+                    <span id="item-amount">1</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <h3>
+                    Куплено
+                </h3>
+            </div>
+
+            <div class="row" id="shopping-list-row">
+                <div id="item">
+                    <span><s>Помідори</s></span>
+                    <span id="item-amount">2</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

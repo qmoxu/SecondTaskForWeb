@@ -1,0 +1,333 @@
+.budje {
+    color: white;
+    display: block;
+    padding:14px;
+    position:fixed;
+    bottom: -50px;
+    left:100px;
+    border-top-right-radius:10px;
+    border-top-left-radius: 10px;
+    background-color:mediumpurple;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+#buylist-text{
+    padding: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.budje:hover {
+    transform: translateY(-50px);
+    background-color: dodgerblue;
+}
+
+@media print {
+    .budje {
+        bottom: 10px;
+        background-color: white;
+        color:black;
+        border: 2px solid black;
+    }
+    #buylist-text {
+        display: none;
+    }
+}
+.product-item {
+    display: inline-block;
+    height: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    align-content: center;
+    width: 10%;
+}
+
+.amount {
+    display: inline-block;
+    height: 27px;
+    width: 27px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 0px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.main {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    width: 85%;
+    margin-inline:auto;
+    background-color: lightgray;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+@media (max-width: 600px) {
+    .main {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        row-gap: 5px;
+        height: 100%;
+    }
+
+    .main > .buylist {
+        width: 100%;
+        height: 20%;
+    }
+
+    .main > .content {
+        width: 100%;
+        height: 70%;
+    }
+}
+.content {
+    width: 60%;
+    margin-bottom:auto;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.buylist {
+    width: 20%;
+    background-color: white;
+    border-radius: 15px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+    border-top: solid lightgrey;
+    border-bottom: solid lightgrey;
+    border-width: 1px;
+}
+
+.main > div {
+
+    box-shadow: 0px 0px 36px -14px rgba(0,0,0,0.75);
+
+}
+
+.main > div > div:last-child {
+
+    border-width: 0px;
+
+}
+
+.main > div > div:first-child {
+
+    border-width: 0px;
+
+}
+
+.add-field {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.add-text {
+    width: 100%;
+}
+
+.add-submit {
+    background-color: rgb(34, 131, 206);
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:700;
+    font-size: 20px;
+    padding-inline: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid  transparent;
+    border-width: 0 0 7px;
+    border-color: rgb(34, 118, 183);
+}
+
+.add-submit:active {
+
+    border-color: rgb(69, 162, 233);
+    background-color: rgb(69, 162, 233);
+
+}
+
+#product-line {
+    text-decoration: line-through;
+}
+
+#product-field-add {
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    border: solid rgb(81, 167, 231);
+    border-radius: 5px;
+    border-width: 1px;
+    height: 10px;
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-right: -5px;
+    margin-bottom: 4px;
+    padding-bottom: 12px;
+    font-size: 15px;
+}
+
+
+/* Права частина */
+.buylist {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+#shopping-list-row {
+    display: flex;
+    justify-content:flex-start;
+
+    padding: 5px
+
+}
+
+#item {
+    padding: 10px;
+    background-color: lightgray;
+    margin-right: 5px;
+    border-radius: 5px;
+
+}
+
+#item-amount {
+    color:white;
+    text-align: center;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 5px 5px 7px;
+    background-color: rgb(242, 113, 29);
+    border-radius: 15px;
+
+}
+
+
+
+
+#all-add > [data-tooltip] {
+
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+
+    width:30px;
+    height:30px;
+
+    border-radius: 100%;
+
+    border:none;
+}
+
+#all-add > [data-tooltip="додати товар"] {
+
+    background-color: rgb(34, 186, 70);
+    border-bottom: 4px solid rgb(33, 163, 64);
+
+}
+
+#all-add > [data-tooltip="додати товар"]:active {
+
+    background-color: rgb(101, 228, 130);
+    border-bottom:4px solid rgb(101, 228, 130);
+}
+
+
+#all-add > [data-tooltip="видалити товар"] {
+
+    background-color: rgb(219, 40, 40);
+    border-bottom: 4px solid rgb(191, 39, 40);
+
+}
+
+#all-add > [data-tooltip="видалити товар"]:active {
+
+    background-color: rgb(239, 158, 158);
+    border-bottom:4px solid rgb(239, 158, 158);
+}
+
+#all-buy > [data-tooltip="куплено"] {
+
+    height: 32px;
+
+    padding-inline: 15px;
+
+    border: none;
+    border-radius: 7px;
+
+    border-right: solid 1px rgb(207, 207, 208);
+    border-left: solid 1px rgb(207, 207, 208);
+    border-top: solid 1px rgb(207, 207, 208);
+
+    border-bottom: solid 4px rgb(207, 207, 208);
+
+}
+
+#all-buy > [data-tooltip="відмінити"] {
+
+    color:white;
+
+    border:none;
+
+    border-radius: 10px;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: rgb(219, 40, 40);
+    border-bottom: 4px solid rgb(191, 39, 40);
+
+}
+
+#all-buy > [data-tooltip="відмінити"]:active {
+
+    background-color: #ef9e9e;
+    border-bottom: 4px solid #ef9e9e;
+
+}
+
+[data-tooltip] {
+    position:relative
+}
+
+[data-tooltip]:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+
+}
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: rgb(255, 0, 255);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    z-index: 1;
+}
